@@ -4,7 +4,7 @@ A sortiment of single-file projects that aren't worth their own repo.
 
 Most if not all of them stem from the Jetbrains Academy Python course, which I highly recommend.
 
-The projects have been (slightly) re-written so I won't have to be ashamed putting 'em github. :P
+The projects have been (slightly) re-written so I won't have to be ashamed putting 'em on github. :P
 
 If you want to see the full, unadultered versions including the learning process, head over to my gists, but be warned: it's 'global' hell:
 
