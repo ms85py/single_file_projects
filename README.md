@@ -4,9 +4,9 @@ A sortiment of single-file projects that aren't worth their own repo.
 
 Most if not all of them stem from the Jetbrains Academy Python course, which I highly recommend.
 
-The projects have been (slightly) re-written so I won't have to be ashamed putting 'em on github. :P
+The projects have been slightly edited so it's not a complete freakshow, but I've absolutely tried my best to keep their original 'spirit' from the time I wrote them alive.
 
-If you want to see the full, unadultered versions including the learning process, head over to my gists, but be warned: it's 'global' hell:
+If you still want to see the full, unadultered versions including the learning process, head over to my gists, but be warned: it's 'global' hell:
 
 https://gist.github.com/ms85py
 
@@ -40,3 +40,32 @@ I'm not using classes extensively here, because I'm not sure how it'd benefit fr
 I'm also not exactly happy with how I query things, but I couldn't think of a way to implement DRY (don't repeat yourself) without making the queries pretty obscure for everyone trying to understand what's going on, so I guess this way is "fine" for now.
 
 **Libraries/Modules used:** SQLAlchemy, datetime.
+
+
+## Simple Banking System
+my third project in Python is a simple Banking system.
+
+After using an SQLite3 DB and SQLAlchemy in the previous project, I now wanted to get to know 'raw' SQL more, so this was the perfect project.
+
+It creates another SQLite3 DB, but this time I'm using it without an ORM and use SQL-queries for everything.
+
+Upon running the program you'll at first see a simple menu with just 2 options, log-in to and existing account with your card number and pin - or create a new account.
+
+Creating a new account will give you a card number and a PIN.
+
+The card numbers is created via the 'random' module and then checked for validity by a checksum test that's using the Luhn-Algorithm.
+
+https://en.wikipedia.org/wiki/Luhn_algorithm
+
+After loggin in to an existing account you'll see another menu that let's you do the usual banking stuff:
+
+- View your balance
+- Add income to the account
+- Transfer funds to another account (with check if account is valid!)
+- Close the account
+- Log out
+- Exit the program
+
+I'm surely juggling things between functions too much here and there's absolutely room for improvement, but I think for the third project I've managed well.
+
+**Libaries/Modules used:** random, sqlite3
