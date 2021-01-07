@@ -35,4 +35,8 @@ It is, as the name suggests, a to-do-list.
 
 You can see todays tasks, show all tasks for the week, show missed tasks and add/delete tasks.
 
+I'm not using classes extensively here, because I'm not sure how it'd benefit from them.
+
+I'm also not exactly happy with how I query things, but I couldn't think of a way to implement DRY (don't repeat yourself) without making the queries pretty obscure for everyone trying to understand what's going on, so I guess this way is "fine" for now.
+
 **Libraries/Modules used:** SQLAlchemy, datetime.
