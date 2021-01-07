@@ -47,17 +47,17 @@ my third project in Python is a simple Banking system.
 
 After using an SQLite3 DB and SQLAlchemy in the previous project, I now wanted to get to know 'raw' SQL more, so this was the perfect project.
 
-It creates another SQLite3 DB, but this time I'm using it without an ORM and use SQL-queries for everything.
+It creates another SQLite3 DB, but this time I'm using it without an ORM and instead use SQL-queries for everything.
 
 Upon running the program you'll at first see a simple menu with just 2 options, log-in to and existing account with your card number and pin - or create a new account.
 
 Creating a new account will give you a card number and a PIN.
 
-The card numbers is created via the 'random' module and then checked for validity by a checksum test that's using the Luhn-Algorithm.
+The card number is created via the 'random' module and then checked for validity by a checksum test that's using the Luhn-Algorithm.
 
 https://en.wikipedia.org/wiki/Luhn_algorithm
 
-After loggin in to an existing account you'll see another menu that let's you do the usual banking stuff:
+After loggin in to an existing account you'll see another menu that'll let you do the usual banking stuff:
 
 - View your balance
 - Add income to the account
