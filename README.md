@@ -81,7 +81,7 @@ When running the file (be aware you need a 'rating.txt' in the same directory!),
 
 After entering the name you're then asked if you wish to play with the normal deck (rock, paper, scissors) or if you want to use your own deck, e.g. rock, paper, scissors, lizard, spock.
 
-It's using a neat little algorithm to process the deck in a way that we're left with a 'gets_beaten' list that contains every choice the users choice will get beaten by.
+It's using a neat little algorithm to process the deck in a way that we're left with a 'gets_beaten' (great choice of variable name, I know~) list that contains every choice the users choice will get beaten by.
 
 What's left is just checking if:
 
