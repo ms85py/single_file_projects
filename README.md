@@ -97,4 +97,35 @@ All in all this project isn't anything special or impressive. But it's neat and 
 
 Here, too, I'm sure there's better ways to do it by using more classes, but as soon as I thought about splitting it in classes for game/player/ai and so son, I was left wondering if that really would make things easier - which, in the end, I found not to be the case.
 
-**Libraries/Modules used**: random
+**Libraries/Modules used:** random
+
+
+
+## Text Based Browser (simple)
+is a very simple text based browser
+
+Almost daily I read about people doing webscraping with Python by using BeautifulSoup or Scrappy on the pydis.com Python Discord.
+I wanted to get in on the fun, too, so I thought this project would be a good first step.
+
+It's also the first project I've tried command line arguments with, so starting this project is done by starting it via cmd and giving it a directory name as the first and only arugment.
+If the directory already exists, it will tell you just that - if it doesn't, it creates the directory which will be used to store the visited websites in respective .txt files, as a kind of 'cache'.
+
+The browser also observes the visited sites and current site via lists that act as stacks.
+This is needed because the browser has a 'back' functionality, which works without having to re-load the page; it will be read from the .txt if there is one.
+That means that the site will only be written to the file on the first visit - and loaded from that file on every visit after that.
+
+To distinguish links from every other content, I used the Colorama module to print them in blue - it's more of me playing around than everything else though.
+
+The browser is far from perfect in general, I'm really disliking the way I handled the 'back' functionality.
+Even worse is the input handling - if I had to do it again, I'd use regex, but...urgh. I really don't like regex.
+
+Now thinking about it, I guess even just splitting at the dots and taking the website name part would've worked way better~
+But as I said, I'm trying to keep the 'spirit' from back when the files were originally written alive, so I'm not going to re-write them just to look good.
+It's a learning process - and I like to see how far I've come by taking a look at my earlier shortcomings from time to time.
+
+In the end I still think it was a nice way to get my feet wet in the world of scraping; but I don't think it's for me.
+
+**Libraries/Modules used:** os, sys, requests, bf4, colorama
+
+
+
