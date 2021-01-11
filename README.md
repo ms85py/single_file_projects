@@ -114,7 +114,7 @@ The browser also observes the visited sites and current site via lists that act 
 This is needed because the browser has a 'back' functionality, which works without having to re-load the page; it will be read from the .txt if there is one.
 That means that the site will only be written to the file on the first visit - and loaded from that file on every visit after that.
 
-To distinguish links from every other content, I used the Colorama module to print them in blue - it's more of me playing around than everything else though.
+To distinguish links from every other content, I used the Colorama module to print them in blue - it's more of me playing around than anything else though.
 
 The browser is far from perfect in general, I'm really disliking the way I handled the 'back' functionality.
 Even worse is the input handling - if I had to do it again, I'd use regex, but...urgh. I really don't like regex.
