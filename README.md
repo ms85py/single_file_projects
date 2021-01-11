@@ -125,7 +125,7 @@ It's a learning process - and I like to see how far I've come by taking a look a
 
 In the end I still think it was a nice way to get my feet wet in the world of scraping; but I don't think it's for me.
 
-**Libraries/Modules used:** os, sys, requests, bf4, colorama
+**Libraries/Modules used:** os, sys, requests, bs4, colorama
 
 
 
