@@ -142,4 +142,5 @@ In the end I still think it was a nice way to get my feet wet in the world of sc
 ## Socket Bruteforcer (not all too malicious)
 with mockup socket server to test out!
 
-Readme for that one to be done. It's quite a bit and every time I start writing it, it ends in a big fucking wall of text~
+
+Readme for that one to be done. It does quite a bit and every time I start writing it, it ends in a big fucking wall of text~
