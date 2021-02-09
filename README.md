@@ -144,6 +144,8 @@ with mockup socket server to test out!
 
 First off, I tried writing the section about this project like 5 times already, and each time I wasn't happy with what I wrote, because it's hard to convey. So excuse me if this isn't written as nicely as in the previous projects; on the bright side the project itself uses docstrings for classes/methods, so you *should* be able to make somewhat sense of it, even if the text below is....not that good.
 
+This was a real fun project - and the first one I made use of multiple classes so things are tidy. In retrospect there's definitely parts of it I'd make and write differently nowadays, but, yet again, I am trying to keep them as close to the original idea as possible. Anyhow, let's get started, this is gonna be quite a bit.
+
 The challenge was that you had to find out the login / password of a socket server that, luckily, had a few things we could exploit.
 
 We know that if the login / pw combination is wrong, the connection will be aborted. But if we get the login correct but the password wrong, the server will respond with a "Wrong password!" instead. This is our cue that we got the correct login and can now proceed to finding out the password.
