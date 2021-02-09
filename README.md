@@ -142,5 +142,36 @@ In the end I still think it was a nice way to get my feet wet in the world of sc
 ## Socket Bruteforcer (not all too malicious)
 with mockup socket server to test out!
 
+First off, I tried writing the section about this project like 5 times already, and each time I wasn't happy with what I wrote, because it's hard to convey. So excuse me if this isn't written as nicely as in the previous projects; on the bright side the project itself uses docstrings for classes/methods, so you *should* be able to make somewhat sense of it, even if the text below is....not that good.
 
-Readme for that one to be done. It does quite a bit and every time I start writing it, it ends in a big fucking wall of text~
+The challenge was that you had to find out the login / password of a socket server that, luckily, had a few things we could exploit.
+
+We know that if the login / pw combination is wrong, the connection will be aborted. But if we get the login correct but the password wrong, the server will respond with a "Wrong password!" instead. This is our cue that we got the correct login and can now proceed to finding out the password.
+
+For the password we found out that if the server password starts with whatever we send it, it will respond slightly slower than when that's not the case.
+
+Finally, if the login / pw combination is correct, we're greeted with a "Connection success!" and the script prints out the information.
+
+Another noteworthy thing is that the server expects login / pw in the form of a json - and since we're sending it all over sockets, we have to encode it.
+
+Now a bit about how it's done in the script itself:
+
+We start off by opening a logins.txt (not provided) and yielding a login from it. Next we create all variations of that login, e.g. "admin" -> "Admin" "aDmin", "adMin". If none of those work, we yield the next login, create variations, try them aaaaand so on until we found the correct login.
+
+Next is the password. We take 'ascii_upper- and lowercase' from the 'string' module, add the numbers 0-9 and use itertools.chain to create an iterator we can yield a character of. We then try that character and measure the response time, if it is correct (response time >= 0.1s)  we keep it and add another character - if it's not (response time < 0.1s), we remove it and try another one in its place. This is done until we have the complete password.
+
+And that's basically it.
+
+**Libraries/Modules used:** itertools, socket, sys, json, string, time.
+
+itertools - for itertools.chain and itertools.product
+
+socket - for sending/receiving over them
+
+sys - just for command line arguments
+
+json - because the server expects login/pw in json format
+
+string - specifically ascii_upper- and lowercase, to use as characters
+
+time - to measure the response time of the server
