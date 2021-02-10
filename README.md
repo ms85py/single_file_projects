@@ -160,7 +160,7 @@ Now a bit about how it's done in the script itself:
 
 We start off by opening a logins.txt (not provided) and yielding a login from it. Next we create all variations of that login, e.g. "admin" -> "Admin" "aDmin", "adMin". If none of those work, we yield the next login, create variations, try them aaaaand so on until we found the correct login.
 
-Next is the password. We take 'ascii_upper- and lowercase' from the 'string' module, add the numbers 0-9 and use itertools.chain to create an iterator we can yield a character of. We then try that character and measure the response time, if it is correct (response time >= 0.1s)  we keep it and add another character - if it's not (response time < 0.1s), we remove it and try another one in its place. This is done until we have the complete password.
+Next is the password. We take 'ascii_upper- and lowercase' from the 'string' module, add the numbers 0-9 and use itertools.chain to create a generator we can yield a character of. We then try that character and measure the response time, if it is correct (response time >= 0.1s)  we keep it and add another character - if it's not (response time < 0.1s), we remove it and try another one in its place. This is done until we have the complete password.
 
 And that's basically it.
 
